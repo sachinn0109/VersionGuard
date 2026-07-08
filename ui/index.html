@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VersionGuard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>VersionGuard</h1>
+        <p>SQL Server Deployment Verification Tool</p>
+
+        <label>Server Name</label>
+        <input type="text" id="server">
+
+        <label>Database Name</label>
+        <input type="text" id="database">
+
+        <label>Username</label>
+        <input type="text" id="username">
+
+        <label>Password</label>
+        <input type="password" id="password">
+
+        <label>SQL Folder</label>
+
+        <div class="folder-section">
+            <input type="text" id="folder">
+            <button>Browse</button>
+        </div>
+
+       <button id="compareBtn" class="compare-btn">
+        Compare Stored Procedures
+        </button>
+
+        <div class="status">
+
+            <h3>Status</h3>
+
+            <p id="status">Waiting for comparison...</p>
+
+        </div>
+
+    </div>
+
+<script src="renderer.js"></script>
+
+</body>
+
+</html>

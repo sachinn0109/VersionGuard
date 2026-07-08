@@ -14,14 +14,14 @@ const { readSqlFolder } = require("./services/folderReader");
 const { connectDatabase } = require("./database/connection");
 const { writeReport } = require("./services/reportWriter");
 
-async function main() {
+async function runComparison(config) {
     const startTime = Date.now();
 
     console.log("=================================");
     console.log("      VersionGuard v1.0");
     console.log("=================================\n");
 
-    const pool = await connectDatabase();
+    const pool = await connectDatabase(config);
 
     const sqlFiles = readSqlFolder("./sql");
 
@@ -116,4 +116,7 @@ async function main() {
 
 }
 
-main();
+//main();
+module.exports = {
+    runComparison
+};

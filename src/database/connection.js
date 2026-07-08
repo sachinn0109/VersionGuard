@@ -32,13 +32,13 @@ const config = {
 
 //console.log(config);
 // meaning : the config object is being logged to the console for debugging purposes.
-async function connectDatabase() {
+async function connectDatabase(dbConfig) {
 
     try {
 
         console.log("Connecting to SQL Server...");
 
-        const pool = await sql.connect(config);
+        const pool = await sql.connect(dbConfig || config);
 
         console.log("Connected Successfully.");
 
